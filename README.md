@@ -49,7 +49,7 @@
 * *eye of mate-image viewer*
 * *caja* 
 * *tint2* 
-* [conky theme!](https://github.com/addy-dclxvi/conky-theme-collections/tree/master/flea)*
+* *[conky theme!](https://github.com/addy-dclxvi/conky-theme-collections/tree/master/flea)*
 
 
 
