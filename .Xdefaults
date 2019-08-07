@@ -1,0 +1,48 @@
+##### THIS FILE IS BEING CURRENTLY MANAGED BY URXVTCONFIG #####
+##### CHANGES DONE TO THIS FILE MANUALLY MAY AFFECT THE FUNCTIONALITY ######
+##### PROCEED WITH CAUTION! #####
+
+! special colors
+*.foreground:  #000000
+*.background:  #ffffff
+*.cursorColor:  #000000
+! black
+*.color0:      #000000
+*.color8:      #000000
+! red
+*.color1:      #000000
+*.color9:      #000000
+! green
+*.color2:      #000000
+*.color10:     #000000
+! yellow
+*.color3:      #a03b1e
+*.color11:     #a03b1e
+! blue
+*.color4:      #000000
+*.color12:     #000000
+! magenta
+*.color5:      #c59820
+*.color13:     #c59820
+! cyan
+*.color6:      #55aaff
+*.color14:     #000000
+! white
+*.color7:      #9ea7a6
+*.color15:     #000000
+
+URxvt*scrollBar:         false
+URxvt*scrollBar_right:   false
+
+URxvt*transparent:       false
+
+URxvt.font: xft:monofur:pixelsize=14
+URxvt.boldFont:
+URxvt.letterSpace: 1
+
+*antialias:  false
+*autohint:   false
+
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
