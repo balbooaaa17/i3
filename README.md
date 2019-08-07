@@ -1,7 +1,11 @@
 # i3 - current setup
 
+![alt text ](https://i.imgur.com/eD0wukN.jpg)
+
+
 ![alt text ](https://i.imgur.com/EWBta7v.png)
 
+* *urxvt(terminal)*
 * *terminator(terminal)*
 * *htop*
 * *ranger*
@@ -9,7 +13,7 @@
 * *coffe script*
 * *i3blocks*
 
-</br> </br> 
+</br> 
 
 ### i3blocks
 ![alt text](https://i.imgur.com/DrTF6MQ.png)
