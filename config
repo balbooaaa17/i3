@@ -7,6 +7,7 @@
 #
 
 
+
 smart_borders on
 
 
@@ -17,7 +18,7 @@ gaps outer 0
 
 
 
-for_window [class="^.*"] border pixel 4
+ for_window [class="^.*"] border pixel 0
 
 # i3 config file (v4)
 #
@@ -48,7 +49,7 @@ floating_modifier $mod
 
 
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec urxvt
 #bindsym $mod+Return exec tilda
 
 
@@ -117,7 +118,7 @@ set $darkblack   #1d2021
 ###########################################################
 #bindsym $mod+d exec dmenu	
 
-bindsym $mod+d exec rofi -show run -lines 6 -eh 2 -width 25 -padding 10 -opacity "85"  -font "monofur bold  13"
+bindsym $mod+d exec rofi -show run -lines 6 -eh 2 -width 25 -padding 10 -opacity 90 -font "monofur bold 13"
 
 
 #-width 30 -padding 50 
@@ -203,6 +204,16 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
+bindsym $mod+F1 workspace 11
+bindsym $mod+F2 workspace 12
+bindsym $mod+F3 workspace 13
+bindsym $mod+F4 workspace 14
+bindsym $mod+F5 workspace 15
+bindsym $mod+F6 workspace 16
+bindsym $mod+F7 workspace 17
+bindsym $mod+F8 workspace 18
+bindsym $mod+F9 workspace 19
+bindsym $mod+F10 workspace 20
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -215,6 +226,19 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+F1 move container to workspace 11
+bindsym $mod+Shift+F2 move container to workspace 12
+bindsym $mod+Shift+F3 move container to workspace 13
+bindsym $mod+Shift+F4 move container to workspace 14
+bindsym $mod+Shift+F5 move container to workspace 15
+bindsym $mod+Shift+F6 move container to workspace 16
+bindsym $mod+Shift+F7 move container to workspace 17
+bindsym $mod+Shift+F8 move container to workspace 18
+bindsym $mod+Shift+F9 move container to workspace 19
+bindsym $mod+Shift+F10 move container to workspace 20
+
+
+
 
 assign [class="Chromium-browser"] $workspace4
 
@@ -263,7 +287,7 @@ bar {
 
      
         position bottom
-          height 19
+          height 24
            hidden_state hide
            
         status_command i3blocks  -c ~/.config/i3/i3blocks.conf  
@@ -329,7 +353,7 @@ exec_always compton
 
 
 
-exec --no-startup-id  /home/balbooaaa/Documents/ayn2linuxserver-master/an2linuxserver.py
+exec --no-startup-id /home/balbooaaa/Documents/Astrit/BOOOKS/Hackers-Collection/scripts/ayn2linuxserver-master/an2linuxserver.py
 
 #exec --no-startup-id /home/balbooaaa/Documents/fortunetext.sh
 
@@ -346,7 +370,6 @@ exec --no-startup-id  /home/balbooaaa/Documents/ayn2linuxserver-master/an2linuxs
 #exec --no-startup-id nm-applet
 #exec --no-startup-id bash -c 'GTK_IM_MODULE="" synapse'
 
-exec --no-startup-id feh --bg-scale ~/Documents/Pictures/wallpapers/aurora.jpg 
 
 #bindsym $mod+Shift+p    exec shutdown-h now
 
@@ -365,7 +388,7 @@ bindsym $mod+shift+p exec /home/balbooaaa/.config/i3/shutdown.sh
 
 #killall -q xfce4-notifyd
 
-exec --no-startup-id dunst -config /home/balbooaaa/.config/dunst/dunstrc 
+exec --no-startup-id dunst -config /home/balbooaaa/.config/dunst/goodOne
 
 
 exec --no-startup-id /home/balbooaaa/Documents/Astrit/BOOOKS/Hackers-Collection/scripts/todo.sh
@@ -421,7 +444,7 @@ mode "$mode_gaps_outer" {
 # exec --no-startup-id /home/balbooaaa/Documents/Astrit/BOOOKS/Hackers-Collection/scripts/astrit.sh
 
 
-
+#exec --no-startup-id xinput --set-prop 'SynPS/2 Synaptics TouchPad' 'Device Enabled' 0
 
 #exec --no-startup-id /home/balbooaaa/Documents/Astrit/BOOOKS/Hackers-Collection/scripts/blur.sh & 
 
@@ -432,15 +455,21 @@ mode "$mode_gaps_outer" {
 bindsym $mod+Shift+s sticky toggle
 
 
-bindsym $mod+Shift+y fullscreen disable; floating enable; resize set 540 240  ; move window to position 955 5
+bindsym $mod+Shift+y fullscreen disable; floating enable; resize set 540 240  ; move window to position 700 5
 
 
 #bindsym $mod+c exec python3 /home/balbooaaa/.config/i3/blocks/focus.py
 #exec --no-startup-id xrandr --auto --output eDP1 --mode 1600x900
-exec --no-startup-id feh --bg-scale /home/balbooaaa/.config/wallee/flokar.jpg
+exec --no-startup-id feh --bg-scale /home/balbooaaa/.config/wallee/sky.jpg
 
 for_window [class="URxvt"] floating enable
 #for_window [class="Xfce4-terminal"] floating enable
+
+for_window [class="Farge"] floating enable
+
+for_window [instance="farge"] floating enable
+
+for_window [instance="Farge"] floating enable
 
 
 #for_window [class="URxvt" instance="floating"] floating enable
@@ -455,3 +484,13 @@ bindsym $mod+z --release exec --no-startup-id ~/.config/i3/blocks/draw-resize.sh
 
 bindsym $mod+x --release exec xkill
 
+bindsym $mod+p exec /home/balbooaaa/.config/i3/i3lock-multimonitor/lock
+
+#exec --no-startup-id autossh -M 0 -R astrit:80:localhost:80 serveo.net
+
+
+
+bindsym Mod4+Shift+g mode "gaming"
+mode "gaming" {
+  bindsym Mod4+Shift+g mode "default"
+}
