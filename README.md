@@ -35,8 +35,8 @@
 </br> </br> 
 
 
-### i3lock - 
-![alt text ](https://i.imgur.com/tKMEAjZ.png)
+### i3lock - 2 monitors 
+![alt text ](https://i.imgur.com/IcBCzgf.png)
 
 
 
